@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">🎴 My Collection</div>
+            <nav class="navbar">
+                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" data-section="collection" class="nav-link active">My collection</a></li>
+                    <li><a href="#" data-section="add" class="nav-link">Add a card</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION COLLECTION -->
+        <section id="collection" class="section active">
+    <div class="hero">
+        <h1>🔴 My Card Collection</h1>
+        <p>My Cards</p>
+    </div>
+
+    <section class="content">
+        <div class="stats">
+            <div class="stat-box">
+                <h3>Total Cards</h3>
+                <p id="totalCards">0</p>
+            </div>
+            <div class="stat-box">
+                <h3>Estimated Value</h3>
+                <p id="totalValue">0$</p>
+            </div>
+        </div>
+
+        <div id="collectionContainer" class="game-cards">
+            <div class="empty-message">
+                <p>No cards in your collection. Add some to get started!</p>
+                <button class="btn-primary" onclick="showSection('add')">+ Add a card</button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section id="add" class="section">
+    <div class="hero">
+        <h1>➕ Add a card</h1>
+        <p>Grow your collection</p>
+    </div>
+
+    <section class="content">
+        <div class="form-container">
+            <form id="cardForm">
+                <div class="form-group">
+                    <label for="cardImage">Card Image</label>
+                    <input type="file" id="cardImage" accept="image/*" required>
+                    <div id="imagePreview" class="image-preview-container"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardName">Card Name</label>
+                    <input type="text" id="cardName" placeholder="Ex: Pikachu GX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardRarity">Rarity</label>
+                    <select id="cardRarity" required>
+                        <option value="Common">Common</option>
+                        <option value="Uncommon">Uncommon</option>
+                        <option value="Rare">Rare</option>
+                        <option value="VeryRare">Very Rare</option>
+                        <option value="Holographic">Holographic</option>
+                        <option value="UltraRare">Ultra Rare</option>
+                        <option value="Alternative">Alternative</option>
+                        <option value="SignedCard">Signed Card</option>
+                        <option value="FullArt">Full Art</option>
+                        <option value="Gold">Gold</option>
+                        <option value="EXIllustrationRare">EX Illustration Rare</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardValue">Estimated Value ($)</label>
+                    <input type="number" id="cardValue" placeholder="Ex: 45.99" step="0.01" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardDescription">Description (optional)</label>
+                    <textarea id="cardDescription" placeholder="Add a description..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">✅ Add to Collection</button>
+            </form>
+        </div>
+    </section>
+</section>
+
+    </main>
+
+    <footer>
+    <section class="strip">
+        <h1>Design and code by Daniel</h1>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/daniel-ung-64b8a2192/" target="_blank">
+                <i class='bx bxl-linkedin-square'></i>
+            </a>
+            <a href="https://github.com/Daniel-Ung" target="_blank">
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+    </section>
+</footer>
+
+<!-- Boxicons CDN à mettre dans le <head> -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
